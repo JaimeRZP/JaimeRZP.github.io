@@ -10,6 +10,25 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			tab1 { padding-left: 4em; }
+			tab2 { padding-left: 8em; }
+		</style>
+		<script type="text/javascript">
+		<!--
+		var arxiv_authorid = "0000-0002-7951-4391";
+		var arxiv_format = "arxiv";
+		var includeSummary = 0;
+		var arxiv_includeComments = 0;
+		var arxiv_includeSubjects = 0;
+		//--></script>
+		<script type="text/javascript" src="https://arxiv.org/js/myarticles.js"></script>
+		<style type="text/css">
+		div.arxivfeed {margin-bottom: 5px; width:1700px;}
+		</style>
+		<script type="text/javascript" src="https://arxiv.org/js/myarticles.js">
+		</script>
+
 	</head>
 	<body class="is-preload">
 
@@ -18,8 +37,7 @@
 				<header>
 					<span class="image avatar"><img src="images/avatar.jpg" alt="" /></span>
 					<h1 id="logo"><a href="#">Jaime Ruiz Zapatero</a></h1>
-					<p>I got reprogrammed by a rogue AI<br />
-					and now I'm totally cray</p>
+					<p>Welcome to my online CV!</p>
 				</header>
 				<nav id="nav">
 					<ul>
@@ -27,7 +45,7 @@
 						<li><a href="#two">Expertise</a></li>
 						<li><a href="#three">Projects</a></li>
 						<li><a href="#four">Education</a></li>
-						<li><a href="#five">Contact</a></li>
+						<li><a href="#five">Publications</a></li>
 					</ul>
 				</nav>
 				<footer>
@@ -53,10 +71,16 @@
 								<div class="container">
 									<header class="major">
 										<h2>Jaime Ruiz Zapatero</h2>
-										<p>Just an incredibly simple responsive site<br />
-										template freebie by <a href="http://html5up.net">HTML5 UP</a>.</p>
+										<p>Astrophysics PhD student at the University of Oxford.</p>
 									</header>
-									<p>Faucibus sed lobortis aliquam lorem blandit. Lorem eu nunc metus col. Commodo id in arcu ante lorem ipsum sed accumsan erat praesent faucibus commodo ac mi lacus. Adipiscing mi ac commodo. Vis aliquet tortor ultricies non ante erat nunc integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum.</p>
+									<p>My research mostly concerns Cosmology with a particular focus in bridging the gap between our theories large scale structure growth and observations. In order to do so, I make extensive use of statistical methods and large data sets.<br />
+									In the past, I have mainly worked developing consistency tests for our cosmological paradigm, the LCDM model, in the light of the S8 tension (why is the Universe less clumpy than what the early Universe would make us believe?). With this aim, I studied the use of Gaussian processes as tools for "model independent" Cosmology.<br />
+									Currently, I am working on alleviating the challenges posed by large cosmological models (100+ parameters) to statistical inference. I am doing so in three different ways: </p>
+									<ul>
+										<li>Combining large amounts in summary statistics of cosmological data to maximize constraining power.</li>
+										<li>Using of gradient information to guide the exploration of the parameter space. </li>
+										<li>Developing codes to obtain quick gradients of theoretical predictions through auto-differentiation. </li>
+									</ul>
 								</div>
 							</section>
 
@@ -64,14 +88,11 @@
 							<section id="two">
 								<div class="container">
 									<h3>Expertise</h3>
-									<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer lorem ipsum dolor sit amet.</p>
 									<ul class="feature-icons">
-										<li class="icon solid fa-code">Write all the code</li>
-										<li class="icon solid fa-cubes">Stack small boxes</li>
-										<li class="icon solid fa-book">Read books and stuff</li>
-										<li class="icon solid fa-coffee">Drink much coffee</li>
-										<li class="icon solid fa-bolt">Lightning bolt</li>
-										<li class="icon solid fa-users">Shadow clone technique</li>
+										<li class="icon solid fa-chart-pie"><b>Assumption-free statistical inference</b>: tested fundamental assumptions of modern Cosmology using Gaussian processes.</li>
+										<li class="icon solid fa-chart-line"><b>High-dimensional statistical inference</b>: Developed one of the first differentiable cosmological code and paired it Hamiltonian Monte Carlo sampling to perform statistical inference with hundreds of parameters in cosmology.</li>
+										<li class="icon solid fa-server"><b>Big data reduction</b>: Co-author of the largest repository of consistently combined summary statistics in cosmolgy from galaxy pixel maps</li>
+										<li class="icon solid fa-bolt"><b>High performance computing</b>: Reduced group's code run time for obtaining predictions for cosmological observables by an order of magnitude down to field standards</li>
 									</ul>
 								</div>
 							</section>
@@ -80,27 +101,27 @@
 							<section id="three">
 								<div class="container">
 									<h3>Projects</h3>
-									<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
+									<p> Click in the pictures to head to the repositories of the projects! </p>
 									<div class="features">
 										<article>
-											<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
+											<a href="https://github.com/JaimeRZP/LimberJack.jl" class="image"><img src="images/LimberJack_logo.png" alt="" /></a>
 											<div class="inner">
-												<h4>Possibly broke spacetime</h4>
-												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
+												<h4>LimberJack.jl</h4>
+												<p>Fully differentiable Julia code to compute predictions of summary statistics of cosmological observables.</p>
 											</div>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
+											<a href="https://github.com/JaimeRZP/GaussianProcess.jl" class="image"><img src="images/gaussian_process_logo.png" alt="" /></a>
 											<div class="inner">
-												<h4>Terraformed a small moon</h4>
-												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
+												<h4>GaussianProcess.jl</h4>
+												<p>Simple implementation of Gaussian processes in Julia.</p>
 											</div>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
+											<a href="https://github.com/xC-ell/xCell" class="image"><img src="images/cosmoteka_logo.png" alt="" /></a>
 											<div class="inner">
-												<h4>Snapped dark matter in the wild</h4>
-												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
+												<h4>Cosmoteka.py</h4>
+												<p>Biggest repository of summary statistics combined in a statistically consistent way in Cosmology using Python </p>
 											</div>
 										</article>
 									</div>
@@ -111,52 +132,27 @@
 							<section id="four">
 								<div class="container">
 									<h3>Education</h3>
-									<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
-									<div class="features">
-										<article>
-											<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
-											<div class="inner">
-												<h4>Possibly broke spacetime</h4>
-												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
-											</div>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
-											<div class="inner">
-												<h4>Terraformed a small moon</h4>
-												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
-											</div>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
-											<div class="inner">
-												<h4>Snapped dark matter in the wild</h4>
-												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
-											</div>
-										</article>
-									</div>
+									<ul class="icons">
+										<li class="icon solid fa-chalkboard"> Astrophysics PhD at the University of Oxford (2020-2024) </li> <br />
+										<tab1> • STFC & St Cross college studentships </tab1> <br />
+										<li class="icon solid fa-graduation-cap">  Msci theoretical physics at UCL  (2016-2020) </li> <br />
+										<tab1> • MAPS faculty Dean’s list </tab1> <br />
+										<tab1> • Additional seasonal prize of merit </tab1> <br />
+										<tab1> • RAS summer student bursary </tab1> <br />
+										<tab1> • First class honours </tab1> <br />
+										<li class="icon solid fa-school">  Bachillerato cientifico-tecnologico at La Salle Buen Pastor  (2014-2016) </li> <br />
+										<tab1> • Matricula de honor </tab1> <br />
+										<tab1> • Premio extraordinario de bachillerato </tab1> <br />
+									</ul>
+
 								</div>
 							</section>
 
 						<!-- Five -->
 							<section id="five">
 								<div class="container">
-									<h3>Contact Me</h3>
-									<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
-									<form method="post" action="#">
-										<div class="row gtr-uniform">
-											<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-											<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-											<div class="col-12"><input type="text" name="subject" id="subject" placeholder="Subject" /></div>
-											<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="6"></textarea></div>
-											<div class="col-12">
-												<ul class="actions">
-													<li><input type="submit" class="primary" value="Send Message" /></li>
-													<li><input type="reset" value="Reset Form" /></li>
-												</ul>
-											</div>
-										</div>
-									</form>
+									<h3>Publications</h3>
+									<div id="arxivfeed"></div>
 								</div>
 							</section>
 
@@ -471,14 +467,14 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 										<span class="image fit"><img src="images/banner.jpg" alt="" /></span>
 										<div class="box alt">
 											<div class="row gtr-50 gtr-uniform">
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/LimberJack_logo.png" alt="" /></span></div>
 												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
 												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
 												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
 												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/LimberJack_logo.png" alt="" /></span></div>
 												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/LimberJack_logo.png" alt="" /></span></div>
 												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
 											</div>
 										</div>
