@@ -6,6 +6,7 @@
 -->
 <html>
 	<head>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 		<title>Jaime Ruiz Zapatero</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -46,7 +47,7 @@
 						<li><a href="#two">Expertise</a></li>
 						<li><a href="#three">Projects</a></li>
 						<li><a href="#four">Education</a></li>
-						<li><a href="#six">Employment History</a></li>
+						<li><a href="#six">Work Experience</a></li>
 						<li><a href="#seven">Teaching, Talks and more</a></li>
 					</ul>
 				</nav>
@@ -85,14 +86,8 @@
 											alt="United Kingdom"></h2>
 										<p>Astrophysics PhD student at the University of Oxford.</p>
 									</header>
-									<p>My research mostly concerns Cosmology with a particular focus in bridging the gap between our theories large scale structure growth and observations. In order to do so, I make extensive use of statistical methods and large data sets.<br />
-									In the past, I have mainly worked developing consistency tests for our cosmological paradigm, the LCDM model, in the light of the S8 tension (why is the Universe less clumpy than what the early Universe would make us believe?). With this aim, I studied the use of Gaussian processes as tools for "model independent" Cosmology.<br />
-									Currently, I am working on alleviating the challenges posed by large cosmological models (100+ parameters) to statistical inference. I am doing so in three different ways: </p>
-									<ul>
-										<li>Combining large amounts in summary statistics of cosmological data to maximize constraining power.</li>
-										<li>Using of gradient information to guide the exploration of the parameter space. </li>
-										<li>Developing codes to obtain quick gradients of theoretical predictions through auto-differentiation. </li>
-									</ul>
+									<p>I am an Astrophysics PhD student at the University of Oxford with a passion for cosmology and statistics. My research focuses on developing new methods to analyze the latest and biggest
+										data sets in order to test our understanding of cosmology. In order to do so I make extensive use of classical machine learning and Bayesian inference.  </p>
 								</div>
 							</section>
 
@@ -101,10 +96,10 @@
 								<div class="container">
 									<h3>Expertise</h3>
 									<ul class="feature-icons">
-										<li class="icon solid fa-chart-pie"><b>Assumption-free statistical inference</b>: developed tests of fundamental assumptions of modern Cosmology using Gaussian processes as tools for agnostic modelling.</li>
-										<li class="icon solid fa-chart-line"><b>High-dimensional statistical inference</b>: developed gradient based sampling techniques to constrain models with hundreds of parameters. </li>
+										<li class="icon solid fa-brain"><b>Classical machine learning</b>: developed tests of fundamental assumptions of modern Cosmology using Gaussian processes as tools for agnostic modelling.</li>
+										<li class="icon solid fa-chart-area"><b>High-dimensional statistical inference</b>: developed gradient based inference algorithms to constrain thousands of parameters. </li>
 										<li class="icon solid fa-server"><b>Big data reduction</b>: co-author of the largest repository of consistently combined summary statistics in Cosmology from pixel maps.</li>
-										<li class="icon solid fa-bolt"><b>High performance computing</b>: developed auto-differentiable code to reduce cost of theory predictions gradients by an order of magnitude.</li>
+										<li class="icon solid fa-code"><b>Auto-differentiable programming</b>: developed the first library of auto-differentiable methods for cosmology in Julia.</li>
 									</ul>
 								</div>
 							</section>
@@ -127,13 +122,6 @@
 											<div class="inner">
 												<h4>LimberJack.jl</h4>
 												<p>Fully differentiable Julia code to compute predictions of summary statistics of cosmological observables.</p>
-											</div>
-										</article>
-										<article>
-											<a href="https://github.com/JaimeRZP/GaussianProcess.jl" class="image"><img src="images/gaussian_process_logo.png" alt="" /></a>
-											<div class="inner">
-												<h4>GaussianProcess.jl</h4>
-												<p>Simple implementation of Gaussian processes in Julia.</p>
 											</div>
 										</article>
 										<article>
@@ -172,12 +160,17 @@
 						<!-- six -->
 							<section id="six">
 								<div class="container">
-									<h3>Employment History</h3>
+									<h3>Work Experience</h3>
 									<ul>
-										<li> <b>Natural language processing internship at Satalia, UK (Aug-Sept 2019) </b> </li> <br />
+										<li> <b>Software developer at the CBL Lab, Cambridge (UK),  June-July 2023 </b> </li> <br />
 											<ul style="list-style-type:square;">
-												<li> Developed a natural language processor specialized in classifying employees reports into the appropriate company’s project using Word2Vec.</li>
-												<li> Developed a proof of concept of a scheduling tool to optimize assets allocations and task ordering for a given project using Monte Carlo simulations in order to asses and minimize potential delays. </li>
+												<li> Refactored the Turing.jl library for Bayesian inference from a monolithic into a microservice design by writing a new interface between Turing.jl's probabilistic programming language and external inference algorithms.</li>
+											</ul>
+									</ul>
+									<ul>
+										<li> <b>Natural language processing internship at Satalia (UK), Aug-Sept 2019 </b> </li> <br />
+											<ul style="list-style-type:square;">
+												<li>Developed a natural language processor to classify employees reports into the company's projects as well as a scheduler to asses and minimize project delays based on Monte Carlo simulations.</li>
 											</ul>
 									</ul>
 
@@ -191,7 +184,6 @@
 									<ul>
 										<li>  Special Relativity and Symmetries tutor at St Peter's college, Oxford (2022) </li>
 										<li>  BIPAC Cosmology journal club organizer and chair (2020-2022)  </li>
-										<li>  Visitor at Dragon School, Oxford (2021-2022) </li>
 										<li>  Leveling up physics mentor, Oxford (2021) </li>
 										<li>  UCL Physics society academic officer (2017) </li>
 									</ul>
@@ -203,10 +195,11 @@
 								<div class="container">
 									<h3>Talks and Seminars</h3>
 									<ul>
+										<li>  <b>EAS 2023</b> - Krakow, July 2023  - 15 mins talk   </li>
+										<li>  <b>KIPAC cosmology seminar</b> - Stanford University, March 2023  - 1 hour talk    </li>
 										<li>  <b>BCCP journal club</b> - UC Berkeley, January 2023  - 30 mins talk  </li>
 										<li>  <b>CNRS cosmology seminar</b> - CNRS, December 2022  - 1 hour joint talk   </li>
 										<li>  <b>Imperial College journal club</b> - Imperial College, December 2022  - 30 mins talk </li>
-										<li>  <b>National Astronomers Meeting 2022</b> - Warwick University, July 2022  - Poster   </li>
 										<li>  <b>IberiCOS 2022</b> - Institute of Space Science in Barcelona, May 2022  - 30 mins talk   </li>
 										<li>  <b>Portsmouth cosmology seminar</b> - University of Portsmouth, May 2022  - 1 hour talk </li>
 										<li>  <b>IberiCOS 2021</b> - University of Lisbon (remote), April 2021 - 30 mins talk   </li>
