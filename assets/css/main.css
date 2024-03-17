@@ -3177,7 +3177,7 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				width: 17em;
+				width: 15em;
 				-moz-transform: translateX(17em);
 				-webkit-transform: translateX(17em);
 				-ms-transform: translateX(17em);
@@ -3186,20 +3186,20 @@ input, select, textarea {
 			}
 
 				#header > header {
-					padding: 2em;
+					padding: 1m;
 				}
 
 					#header > header .avatar {
 						margin: 0 auto 1.6875em auto;
-						width: 6em;
+						width: 10.0em;
 					}
 
 					#header > header h1 {
-						font-size: 1.5em;
+						font-size: 15.em;
 					}
 
 					#header > header p {
-						margin: 1em 0 0 0;
+						margin: 0 0 0 0;
 					}
 
 				#header > footer {

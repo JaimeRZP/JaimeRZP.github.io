@@ -6,6 +6,8 @@
 -->
 <html>
 	<head>
+		<script src="https://cdn.jsdelivr.net/npm/github-repo-cards@1.0.9/app.js" defer></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-repo-cards@1.0.9/style.css">
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 		<title>Jaime Ruiz Zapatero</title>
 		<meta charset="utf-8" />
@@ -40,23 +42,21 @@
 					<h1 id="name"><a href="#">Jaime </a></h1>
 					<h1 id="surname"><a href="#">Ruiz Zapatero </a></h1>
 					<a href="assets/cv.pdf" download>📥 Download my CV</a>
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/jaime-ruiz-zapatero-524ab0130/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/JaimeRZP" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="mailto: jaimerz011235813@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
 				</header>
 				<nav id="nav">
 					<ul>
 						<li><a href="#one" class="active">Hello!</a></li>
 						<li><a href="#two">Expertise</a></li>
 						<li><a href="#three">Projects</a></li>
-						<li><a href="#four">Education</a></li>
-						<li><a href="#six">Work Experience</a></li>
-						<li><a href="#seven">Teaching, Talks and more</a></li>
+						<li><a href="#seven">Publications</a></li>
 					</ul>
 				</nav>
 				<footer>
-					<ul class="icons">
-						<li><a href="https://www.linkedin.com/in/jaime-ruiz-zapatero-524ab0130/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://github.com/JaimeRZP" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="mailto: jaimerz011235813@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
 				</footer>
 			</section>
 
@@ -104,107 +104,12 @@
 							</section>
 
 						<!-- Three -->
-							<section id="three">
-								<div class="container">
-									<h3>Projects</h3>
-									<p>	<b> Click the pictures to head to each repository! </b> </p>
-									<div class="features">
-										<article>
-											<a href="https://github.com/JaimeRZP/MicroCanonicalHMC.jl" class="image"><img src="images/mchmc_logo.png" alt="" /></a>
-											<div class="inner">
-												<h4>MicroCanonicalHMC.jl</h4>
-												<p>Gradient based sampler that uses one single energy level to explore large parameter spaces following Hamiltonian trajectories.</p>
-											</div>
-										</article>
-										<article>
-											<a href="https://github.com/JaimeRZP/LimberJack.jl" class="image"><img src="images/LimberJack_logo.png" alt="" /></a>
-											<div class="inner">
-												<h4>LimberJack.jl</h4>
-												<p>Fully differentiable Julia code to compute predictions of summary statistics of cosmological observables.</p>
-											</div>
-										</article>
-										<article>
-											<a href="https://github.com/xC-ell/xCell" class="image"><img src="images/cosmoteka_logo.png" alt="" /></a>
-											<div class="inner">
-												<h4>Cosmoteka.py</h4>
-												<p>Biggest repository of summary statistics combined in a statistically consistent way in Cosmology using Python </p>
-											</div>
-										</article>
-									</div>
-								</div>
-							</section>
-						
-						<!-- Four -->
-							<section id="four">
-								<div class="container">
-									<h3>Education</h3>
-									<ul class="icons">
-										<li class="icon solid fa-chalkboard"> Astrophysics PhD at the University of Oxford (2020-2024) </li> <br />
-										<tab1> • STFC & St Cross college studentships </tab1> <br />
-										<li class="icon solid fa-chalkboard"> Visitor at UC Berkeley (Jan-May 2023) </li> <br />
-										<tab1> • STFC LTA studentship </tab1> <br />
-										<li class="icon solid fa-graduation-cap">  Msci theoretical physics at UCL  (2016-2020) </li> <br />
-										<tab1> • MAPS faculty Dean’s list </tab1> <br />
-										<tab1> • Additional seasonal prize of merit </tab1> <br />
-										<tab1> • RAS summer student bursary </tab1> <br />
-										<tab1> • First class honours </tab1> <br />
-										<li class="icon solid fa-school">  Bachillerato cientifico-tecnologico at La Salle Buen Pastor  (2014-2016) </li> <br />
-										<tab1> • Matricula de honor </tab1> <br />
-										<tab1> • Premio extraordinario de bachillerato </tab1> <br />
-									</ul>
-
-								</div>
-							</section>
-
-						<!-- six -->
-							<section id="six">
-								<div class="container">
-									<h3>Work Experience</h3>
-									<ul>
-										<li> <b>Software developer at the CBL Lab, Cambridge (UK),  June-July 2023 </b> </li> <br />
-											<ul style="list-style-type:square;">
-												<li> Refactored the Turing.jl library for Bayesian inference from a monolithic into a microservice design by writing a new interface between Turing.jl's probabilistic programming language and external inference algorithms.</li>
-											</ul>
-									</ul>
-									<ul>
-										<li> <b>Natural language processing internship at Satalia (UK), Aug-Sept 2019 </b> </li> <br />
-											<ul style="list-style-type:square;">
-												<li>Developed a natural language processor to classify employees reports into the company's projects as well as a scheduler to asses and minimize project delays based on Monte Carlo simulations.</li>
-											</ul>
-									</ul>
-
-								</div>
-							</section>
-
-						<!-- seven -->
-							<section id="seven">
-								<div class="container">
-									<h3>Teaching and other Responsibilities</h3>
-									<ul>
-										<li>  Special Relativity and Symmetries tutor at St Peter's college, Oxford (2022) </li>
-										<li>  BIPAC Cosmology journal club chair (2020-2022)  </li>
-										<li>  Leveling up physics mentor, Oxford (2021) </li>
-										<li>  UCL Physics society academic officer (2017) </li>
-									</ul>
-								</div>
-							</section>
-
-						<!-- eight -->
-							<section id="eight">
-								<div class="container">
-									<h3>Talks and Seminars</h3>
-									<ul>
-										<li>  <b>EAS 2023</b> - Krakow, July 2023  - 15 mins talk   </li>
-										<li>  <b>KIPAC cosmology seminar</b> - Stanford University, March 2023  - 1 hour talk    </li>
-										<li>  <b>BCCP journal club</b> - UC Berkeley, January 2023  - 30 mins talk  </li>
-										<li>  <b>CNRS cosmology seminar</b> - CNRS, December 2022  - 1 hour joint talk   </li>
-										<li>  <b>Imperial College journal club</b> - Imperial College, December 2022  - 30 mins talk </li>
-										<li>  <b>IberiCOS 2022</b> - Institute of Space Science in Barcelona, May 2022  - 30 mins talk   </li>
-										<li>  <b>Portsmouth cosmology seminar</b> - University of Portsmouth, May 2022  - 1 hour talk </li>
-										<li>  <b>IberiCOS 2021</b> - University of Lisbon (remote), April 2021 - 30 mins talk   </li>
-									</ul>
-								</div>
-							</section>
+						<section id="three">
+							<div class="container">
+								<h3>Projects</h3>
+								<section class="github-repo-cards" data-user="JaimeRZP" data-target-blank="true" data-background=#ffff></section>
+							</div>
+						</section>
 
 						<!-- nine -->
 							<section id="nine">
