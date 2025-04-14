@@ -21,11 +21,11 @@
 
         .container {
             position: relative;
-            z-index: 1; /* Ensure content is above the animation */
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             padding: 20px;
+            min-height: 100vh; /* Ensure the container takes at least the full viewport height */
         }
 
         .column {
@@ -34,6 +34,16 @@
             padding: 10px;
             border: 1px solid white;
             box-sizing: border-box;
+        }
+
+        .column a {
+            color: #ffffff; /* Set the hyperlink color to green */
+            text-decoration: none; /* Remove the underline */
+        }
+
+        .column a:hover {
+            color: #8a8a8a; /* Change color to red when hovered */
+            text-decoration: underline; /* Add underline on hover */
         }
 
         .bottom-text {
@@ -102,9 +112,6 @@
         <div class="column">
             <div class="ascii-art">
                 <pre>
-<b>Jaime Ruiz Zapatero</b>
-jaime.ruiz-zapatero@ucl.ac.uk
-
 ##**=####%*=*---=-=#*#####********
 ****=##--::--:.:.::-::+=#*****+***
 ****+#-:--::::---:...::-=**#****+#
@@ -127,14 +134,22 @@ jaime.ruiz-zapatero@ucl.ac.uk
             </div>
         </div>
         <div class="column">
-            <p><b>About:</b></p> 
+            <p><b>Jaime Ruiz Zapatero</b></p>
+            <p>jaime.ruiz-zapatero@ucl.ac.uk</p>
             Research Software Engineer at University College London (UCL) working on Vera Rubin and Euclid collaborations.
             My research focuses in the quantification and propagation of uncertainty in cosmological measurements to the properties of the Universe. 
             In order to do so I use state-of-the-art statistical methods and machine learning techniques.
 
         </div>
         <div class="column">
-            <p class="column-title"><a href="page3.html">Projects</a>: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            <p class="column-title"><b>Projects:</b></p>
+            <ul>
+                <li><a href="https://github.com/LSSTDESC/nz_prior" target="_blank">nz_prior.py</a></li>
+                <li><a href="https://github.com/heracles-ec/heracles" target="_blank">heracles.py</a></li>
+                <li><a href="https://github.com/JaimeRZP/MicroCanonicalHMC.jl" target="_blank">microcanonicalhmc.jl</a></li>
+                <li><a href="https://github.com/JaimeRZP/LimberJack.jl" target="_blank">limberjack.jl</a></li>
+                <li><a href="https://github.com/Cosmotheka/Cosmotheka" target="_blank">cosmotheka.py</a></li>
+            </ul>
         </div>
         <div class="column">
             <p class="column-title"><a href="page4.html">Column 4</a>: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
