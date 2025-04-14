@@ -51,13 +51,19 @@
             min-height: 100vh; /* Ensure the container takes at least the full viewport height */
         }
 
-        .bottom-text a {
-        color: #ffffff; /* Set the hyperlink color to green */
-        text-decoration: none; /* Remove the underline */
+        .bottom-text .links {
+            display: flex; /* Align items horizontally */
+            justify-content: center; /* Center the links */
+            gap: 20px; /* Add spacing between the links */
         }
 
-        .bottom-text a:hover {
-            color: #8a8a8a; /* Change color to red when hovered */
+        .bottom-text .links a {
+            color: #ffffff; /* Set the hyperlink color to white */
+            text-decoration: none; /* Remove underline */
+        }
+
+        .bottom-text .links a:hover {
+            color: #8a8a8a; /* Change color to gray on hover */
             text-decoration: underline; /* Add underline on hover */
         }
 
@@ -156,7 +162,10 @@
         </div>
     </div>
     <div class="bottom-text">
-        <h3><a href="https://arxiv.org/a/0000-0002-7951-4391.html" target="_blank">Publications</a></h3>
+        <div class="links">
+            <h3><a href="https://arxiv.org/a/0000-0002-7951-4391.html" target="_blank">Publications</a></h3>
+            <h3><a href="assets/cv.pdf" target="_blank">CV</a></h3>
+        </div>
     </div>
 </body>
 </html>
