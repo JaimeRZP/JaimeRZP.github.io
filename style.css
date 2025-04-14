@@ -1,0 +1,113 @@
+body {
+    height: 100%;
+    margin: 0;
+    font-family: monospace;
+    background-color: black;
+    color: white;
+    position: relative;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.column {
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid white;
+    box-sizing: border-box;
+}
+
+.column a {
+    color: #ffffff; /* Set the hyperlink color to green */
+    text-decoration: none; /* Remove the underline */
+}
+
+.column a:hover {
+    color: #8a8a8a; /* Change color to red when hovered */
+    text-decoration: underline; /* Add underline on hover */
+}
+
+.bottom-text {
+    margin-top: 20px;
+    text-align: center;
+    min-height: 100vh; /* Ensure the container takes at least the full viewport height */
+}
+
+.bottom-text .links {
+    display: flex; /* Align items horizontally */
+    justify-content: center; /* Center the links */
+    gap: 20px; /* Add spacing between the links */
+}
+
+.bottom-text .links a {
+    color: #ffffff; /* Set the hyperlink color to white */
+    text-decoration: none; /* Remove underline */
+}
+
+.bottom-text .links a:hover {
+    color: #8a8a8a; /* Change color to gray on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    from {
+        border-right-color: white;
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+.ascii-art pre {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 2px solid white;
+    white-space: pre;
+    animation: typing 4s steps(20, end) infinite, blink 0.5s step-end infinite alternate;
+}
+
+.column-title a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.column-title a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.column-title a:hover {
+    text-decoration: underline;
+}
+
+.bsc-student {
+    color: rgb(255, 230, 128); /* Change this to your desired color */
+}
+.summer-student {
+    color: rgb(122, 202, 255); /* Change this to your desired color */
+}
+.phd-student {
+    color: rgb(126, 255, 163); /* Change this to your desired color */
+}
+.msci-student {
+    color: rgb(255, 125, 125); /* Change this to your desired color */
+}
