@@ -6,9 +6,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    <title>jaimeruizzapatero</title>
+    <title>rm*</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body {
             height: 100%;
@@ -25,6 +26,17 @@
             flex-wrap: wrap;
             justify-content: center;
             padding: 20px;
+        }
+        
+        .ascii-art-column {
+            position: relative;
+            height: 300px; /* Set the height of the container */
+            overflow: hidden; /* Hide content outside the container */
+            width: 300px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid white;
+            box-sizing: border-box;
         }
 
         .column {
@@ -117,40 +129,60 @@
     <div class="container">
         <div class="column">
             <div class="ascii-art">
-                <pre>
-##**=####%*=*---=-=#*#####********
-****=##--::--:.:.::-::+=#*****+***
-****+#-:--::::---:...::-=**#****+#
-+*+*=-:--+++*****++=-:...:########
-#***::=###*******++++-:::::=======
-###*.:*###*********++-..:..++%@@@@
-*###.:*####*****++-::-:..:.=+*+=*#
-#*#*=.-::..:-+-:::---=+....-=--:--
-#+=#-.+:::::-**---===++-:-..:::==:
-#=.-::##*+***#*+++*****+:-::::::::
-#%-:--##**+*##*+*==++++==.:=-:+#+-
-+*+:+.:*+-++=---=====+=+...:-=++++
-+=-=--.++--====---.====....:::**++
-***--...++**++=+++++==-....:==:**+
-#*#=:=.::+**+=--+++==-==...:.-=+++
-*+*+==.:...+++====::=++=......=++*
-***###:...:=+-:::-==+++==:--+==+**
-#*%*#*#=-.:=++====++++++**====*--.
+                <pre>                                                                                       
+       =           *                          
+      +  =         *              
+      :   =        *              
+     +     :       *           
+           .       *           
+    -       :      *           
+            +=     *          
+   -         .-    *                                              
+ :             *-  *                                              
+ - - - - - - - - - + - - - - - - - - -                         
+  :                +      -+ =                    
+  -::-             +      -   +                      
+    :++:           +     -                    
+     ++++::        +           +                  
+       -+++=:      +    :-                         
+          -:::-    +            :                   
+              .    +   -         +                     
+                   +  -.          +                      
                 </pre>
             </div>
         </div>
         <div class="column">
-            <p><b>Jaime Ruiz Zapatero</b></p>
-            <p>jaime.ruiz-zapatero@ucl.ac.uk</p>
-            Research Software Engineer at University College London (UCL) working on Vera Rubin and Euclid.
-            My research focuses in the quantification and propagation of uncertainty in Cosmology. 
-            In order to do so I use state-of-the-art statistical methods and machine learning techniques.
-            <p></p>
-            Are you a student looking in work?
-            <p></p>
-            Shoot me an email and we can figure out something.
-
-
+            <p class="column-title"><b>Research:</b></p>
+            <p>My research focuses in the the statistical and computational challenges arising in the analysis of
+                large scale structure data in cosmology. Cosmology is currently experiencing an unprecedented rise
+                in the quantity and quality of data. The Dark Energy Spectroscopic Instrument (DESI) has already
+                recorded more galaxy spectra in its first two years of operations than previously done in the whole
+                history of humanity. Moreover, next-generation surveys such as Legacy Survey of Space and Time
+                (LSST), Euclid, the Nancy Grace Roman space telescope, the Simons Observatory
+                promise to further accelerate this trend in the next decade. In order to match the quality of the data,
+                physicists are starting to incorporate into their theoretical predictions more of the physical, observational
+                and instrumental effects which, until now, could be overlooked. In practice this translates into a
+                dramatic increase in the number of parameters that future analyses will have to consider. This combination
+                of large data sets with complex models will overwhelm current inference methods, greatly
+                limiting the scope of future cosmological analyses to the point of defeating the purpose of the newly
+                commissioned facilities.</p>
+    
+                <p>My work tackles the challenges posed by the up-coming generation of data in two distinctive ways.
+                I am interested in increasing the scope of cosmological models as well as improving models of systematic
+                effects to resolve the current inconsistencies between different cosmological analyses. I also
+                aim to accelerate the inference methods by which models are constrained given the greatest and
+                latest data sets. In order to do so I make extensive use of machine learning methods and new
+                computational methods.</p>
+        </div>
+        <div class="column">
+            <p class="column-title"><b>Open Source Codes:</b></p>
+            <ul>
+                <li><a href="https://github.com/LSSTDESC/nz_prior" target="_blank">nz_prior.py</a></li>
+                <li><a href="https://github.com/heracles-ec/heracles" target="_blank">heracles.py</a></li>
+                <li><a href="https://github.com/JaimeRZP/MicroCanonicalHMC.jl" target="_blank">microcanonicalhmc.jl</a></li>
+                <li><a href="https://github.com/JaimeRZP/LimberJack.jl" target="_blank">limberjack.jl</a></li>
+                <li><a href="https://github.com/Cosmotheka/Cosmotheka" target="_blank">cosmotheka.py</a></li>
+            </ul>
         </div>
         <div class="column">
             <p class="column-title"><b>Index:</b></p>
