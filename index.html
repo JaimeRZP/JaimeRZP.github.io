@@ -9,40 +9,14 @@
     <title>rm*</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript">
-		<!--
-		var arxiv_authorid = "0000-0002-7951-4391";
-		var arxiv_format = "arxiv";
-		var includeSummary = 0;
-		var arxiv_includeComments = 0;
-		var arxiv_includeSubjects = 0;
-		//--></script>
-		<script type="text/javascript" src="https://arxiv.org/js/myarticles.js"></script>
-		<style type="text/css">
-		div.arxivfeed {margin-bottom: 5px; width:0px;}
-		</style>
-		<script type="text/javascript" src="https://arxiv.org/js/myarticles.js">
-		</script>
     <style>
         body {
+            height: 100%;
             margin: 0;
             font-family: monospace;
             background-color: black;
             color: white;
             position: relative;
-        }
-
-        .ascii-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1; /* Place it behind the content */
-            color: rgba(255, 255, 255, 0.1); /* Faint color for the background */
-            font-size: 10px;
-            white-space: pre;
-            overflow: hidden;
         }
 
         .container {
@@ -65,6 +39,16 @@
         .bottom-text {
             margin-top: 20px;
             text-align: center;
+        }
+
+        .bottom-text a {
+        color: #ffffff; /* Set the hyperlink color to green */
+        text-decoration: none; /* Remove the underline */
+        }
+
+        .bottom-text a:hover {
+            color: #8a8a8a; /* Change color to red when hovered */
+            text-decoration: underline; /* Add underline on hover */
         }
 
         @keyframes typing {
@@ -143,7 +127,7 @@ jaime.ruiz-zapatero@ucl.ac.uk
             </div>
         </div>
         <div class="column">
-            <p> <b>About:</b></p> 
+            <p><b>About:</b></p> 
             Research Software Engineer at University College London (UCL) working on Vera Rubin and Euclid collaborations.
             My research focuses in the quantification and propagation of uncertainty in cosmological measurements to the properties of the Universe. 
             In order to do so I use state-of-the-art statistical methods and machine learning techniques.
