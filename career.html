@@ -27,17 +27,6 @@
             justify-content: center;
             padding: 20px;
         }
-        
-        .ascii-art-column {
-            position: relative;
-            height: 500px; /* Set the height of the container */
-            overflow: hidden; /* Hide content outside the container */
-            width: 300px;
-            margin: 10px;
-            padding: 10px;
-            border: 1px solid white;
-            box-sizing: border-box;
-        }
 
         .column {
             width: 300px;
@@ -79,12 +68,24 @@
             text-decoration: underline; /* Add underline on hover */
         }
 
-        @keyframes scroll {
+        @keyframes typing {
             0% {
-                transform: translateY(1%);
+                width: 0;
+            }
+            50% {
+                width: 100%;
             }
             100% {
-                transform: translateY(-100%);
+                width: 100%;
+            }
+        }
+
+        @keyframes blink {
+            from {
+                border-right-color: white;
+            }
+            to {
+                border-right-color: transparent;
             }
         }
 
@@ -93,8 +94,9 @@
             overflow: hidden;
             border-right: 2px solid white;
             white-space: pre;
-           animation: scroll 10s linear infinite;
+            animation: typing 4s steps(20, end) infinite, blink 0.5s step-end infinite alternate;
         }
+
         .column-title a {
             color: white;
             text-decoration: none;
@@ -113,7 +115,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="ascii-art-column">
+        <div class="column">
             <div class="ascii-art">
                 <pre>                                                                             
     ___
