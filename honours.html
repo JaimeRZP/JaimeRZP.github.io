@@ -27,6 +27,17 @@
             justify-content: center;
             padding: 20px;
         }
+        
+        .ascii-art-column {
+            position: relative;
+            height: 300px; /* Set the height of the container */
+            overflow: hidden; /* Hide content outside the container */
+            width: 300px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid white;
+            box-sizing: border-box;
+        }
 
         .column {
             width: 300px;
@@ -68,24 +79,12 @@
             text-decoration: underline; /* Add underline on hover */
         }
 
-        @keyframes typing {
+        @keyframes scroll {
             0% {
-                width: 0;
-            }
-            50% {
-                width: 100%;
+                transform: translateY(1%);
             }
             100% {
-                width: 100%;
-            }
-        }
-
-        @keyframes blink {
-            from {
-                border-right-color: white;
-            }
-            to {
-                border-right-color: transparent;
+                transform: translateY(-100%);
             }
         }
 
@@ -94,7 +93,7 @@
             overflow: hidden;
             border-right: 2px solid white;
             white-space: pre;
-            animation: typing 4s steps(20, end) infinite, blink 0.5s step-end infinite alternate;
+           animation: scroll 10s linear infinite;
         }
         .column-title a {
             color: white;
@@ -115,23 +114,42 @@
 <body>
     <div class="ascii-background" id="ascii-background"></div> <!-- Add this element -->
     <div class="container">
-        <div class="column">
+        <div class="ascii-art-column">
             <div class="ascii-art">
                 <pre>                                                                             
-=+**%%%%%%%#%%#%%%::::::. =*==   ----
---=+.*+*+**::-@%+:-*        %%*  -:. 
-==%@=. #**#--@@%=. =      %## *#     
-=+@=-.==%+*:-@@=* -       *+-= =     
-+%@-* +*%#%--+@++-.%#%%=  #++     .:.
-#%@===%@@*#@%%=.-.  %%%%#-=*++  #: ..
-%##=:+%%@%%%%%::-  :+*%%==+#%#- -    
-*%*=:+%%##@@%%.    . =#%+==+.      .:
-=+=+:##%*+@@%#  .   .=%**=-:*-:-. :::
-    :-=.+::-+#%%#      ::-%#=-.:-:......
-:.  **-  *%@%%=:      *@ ++-.:- .....
-::.  .-.=*#@%#::     :*@%%=--... ....
-::  ..=:**=@%@:      .-#%@+=:-    ..:
-:::    :=@*%%%::    .  *%@+-::..  .:-
+    ___
+    .-     \
+    /   _    \
+    |  /   \   \
+    \|     \   \
+    \      \   \
+        \      \   \
+        \     _\   \
+        \  /       \
+        \|         |
+            \  ~      |
+            \.__ ~   \
+                \     \
+                \     \
+                \     \
+                    \ ._=_\
+                    \/    >
+                    ` \\\
+                    .  \\\\   .
+                    .    |||| .   .
+                _________________
+                <_________________>
+                \ _________o___ /
+                    \    o  .   /
+                    \   .   /
+                        \   /
+                        | |
+                        | |
+                        | |
+                        | |
+                    ___| |___
+                  _--         --_
+                    -----------
                 </pre>
             </div>
         </div>
@@ -149,7 +167,6 @@
             <p class="column-title"><b>Index:</b></p>
             <ul>    
                 <li><a href="/index.html">index</a></li>
-                <li><a href="/research.html">research</a></li>
                 <li><a href="/projects.html">projects</a></li>
                 <li><a href="/students.html">students</a></li>
                 <li><a href="/education.html">education</a></li>
