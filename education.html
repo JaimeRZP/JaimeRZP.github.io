@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <title>rm*</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            height: 100%;
+            margin: 0;
+            font-family: monospace;
+            background-color: black;
+            color: white;
+            position: relative;
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .column {
+            width: 500px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid white;
+            box-sizing: border-box;
+        }
+
+        .column a {
+            color: #ffffff; /* Set the hyperlink color to green */
+            text-decoration: none; /* Remove the underline */
+        }
+
+        .column a:hover {
+            color: #8a8a8a; /* Change color to red when hovered */
+            text-decoration: underline; /* Add underline on hover */
+        }
+
+        .bottom-text {
+            margin-top: 20px;
+            text-align: center;
+            min-height: 100vh; /* Ensure the container takes at least the full viewport height */
+        }
+
+        .bottom-text .links {
+            display: flex; /* Align items horizontally */
+            justify-content: center; /* Center the links */
+            gap: 20px; /* Add spacing between the links */
+        }
+
+        .bottom-text .links a {
+            color: #ffffff; /* Set the hyperlink color to white */
+            text-decoration: none; /* Remove underline */
+        }
+
+        .bottom-text .links a:hover {
+            color: #8a8a8a; /* Change color to gray on hover */
+            text-decoration: underline; /* Add underline on hover */
+        }
+
+        @keyframes typing {
+            0% {
+                width: 0;
+            }
+            50% {
+                width: 100%;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink {
+            from {
+                border-right-color: white;
+            }
+            to {
+                border-right-color: transparent;
+            }
+        }
+
+        .ascii-art pre {
+            display: inline-block;
+            overflow: hidden;
+            border-right: 2px solid white;
+            white-space: pre;
+            animation: typing 4s steps(20, end) infinite, blink 0.5s step-end infinite alternate;
+        }
+        .column-title a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .column-title a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .column-title a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="ascii-background" id="ascii-background"></div> <!-- Add this element -->
+    <div class="container">
+        <div class="column">
+            <div class="ascii-art">
+                <pre>                                                                             
+:-==++**#############::------:                       @==:             
+::-----------------------===@%%%#%%#-----::::..  .++*#==.      -------
+@@@@@%%#**###%%%%%%%%%%%%%*@@@@%%+###-##+--==:.      +++=:     -:-----
+:--=-=-%%%###++***+*-::--=@@#+=:..  .*            .%%%%%**#-          
+--==+%@@%=::.=*=##*##-:--%@@*+=:.:   %           %%@%%%#**=#:         
+:==+%@*=-:.   %#*####---=%%%*%%%*+#+:#          +%++==.   :##         
+-==*@%+=-=.:%=*@+**#*-:-+@*%===++  . *          =%*+.-.    *          
+-=*@@+=-+%:.:-=@*##*=:--*@@%+**+*. *.@%          %*+*#:*+   -         
+-%%%@%-=+=:*==#@%+%%:::--*%@+=+*:. :%%=%%%##     *+++* --   :         
+-*%%%@+--. :=%%%@%#%----=-@@#++++:. @%%%%%%%%*... #*++*         ......
+#%%#@@=+===*%@@@%#*#+#@%%%%=..+--    *%%%%%%%@..:::.*+*%:    %+.. .::-
+%%%%%%=---=+%%%@%%%%%%@%%%+-         =*##%%%%@#  -.+@*++:     +*      
+%%#%#%+-:-*%%%%%%%%#%%%%%%=:::==:   .:=**%%%%@===++@%%##+=  #-=       
+###%%#+--=#%@%%@%%#%@%%%%%=.        ..:-**%%%+=====+*++--:::  -     .-
+###%%*=-:-+%%%%%%##@@%%%%%-.           ==%#%%*+====-.+    .        :::
+%%%%=+*::=%%%%%###*@@@%%%%.     .    ...=*#*##+===--=  =-::: -   .::::
+-===-=+#::#%*%%#+=+%@%%%%%:    ..    ...=+%#***+==--.-  :::-    .:::::
+---::==.=:=#--==+=+%%@@%%#=.    .    ...:*%%#**===---:-   : *...::::.:
+:.    -= -=* .:.-++#%%%%%#=.         :. -+:@%#%*=---..::: - ::.:......
+:      -= #-    -+*%%%%%%#*-::..   .  .:::*@@% #++=:. .::-  ..::......
+:       #**:    -+%###%%%##..  .     . . .#@@%=-+===-:..:::...........
+::...   -#*--. .=*%%##%%%#-+::            #+@@*##=----::.     ........
+:::-.   .%#-:.==*+=%+#@%@##- .          .-+-@%%#%+=--::-:.  : ........
+::::.   -.=-- +==**-@%%%%@--:-          ::-:@%@%@@=-----+  .  ........
+::::.. .:  -==-===**#@%%%@#-   .        ..::*@%%@#+=--::.. :  :.....:-
+::::.   #*.  =-===@+=@%@%%*=:              .#@@@@%*=--:::....    ...::
+::::::.=     .:=@@@@#@%%@@*::.:             **@@@@+--::......   ..::::      
+                </pre>
+            </div>
+        </div>
+        <div class="column">
+            <p class="column-title"><b>Honours:</b></p>
+            <ul class="icons">
+                <li> 2020 - Joint STFC & St Cross College PhD studentship </li> <br />
+                <li> <a href="assets/deans_list.pdf" download> 2020 - UCL MAPS faculty Dean’s list </a> </li> <br />
+                <li> <a href="assets/additional_seasonal_prize.pdf" download> 2020 - UCL MAPS faculty additional seasonal prize of merit </a> </li> <br />
+                <li> <a href="assets/premio_extraordinario.pdf" download> 2016 - Premio extraordinario de bachillerato </a> </li> <br />
+                <li> <a href="assets/matricula_de_honor.jpg" download> 2016 - Matricula de honor de Bachillerato </a> </li> <br />
+            </ul>
+        </div>
+        <div class="column">
+            <p class="column-title"><b>Index:</b></p>
+            <ul>    
+                <li><a href="/index.html">index</a></li>
+                <li><a href="/research.html">research</a></li>
+                <li><a href="/projects.html">projects</a></li>
+                <li><a href="/students.html">students</a></li>
+                <li><a href="/education.html">education</a></li>
+                <li><a href="/honours.html">honours</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="bottom-text">
+        <div class="links">
+            <h3><a href="https://arxiv.org/a/0000-0002-7951-4391.html" target="_blank">Publications</a></h3>
+            <h3><a href="assets/cv.pdf" target="_blank">CV</a></h3>
+            <h3><a href="https://github.com/JaimeRZP" target="_blank">GitHub</a></h3>
+        </div>
+    </div>
+</body>
+</html>
