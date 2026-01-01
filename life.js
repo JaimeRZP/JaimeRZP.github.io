@@ -1,22 +1,34 @@
 const container = document.getElementById("ascii-background");
 
-const cellWidth = 8;
-const cellHeight = 10;
+/* ---------- measure character size ---------- */
+const measure = document.createElement("span");
+measure.textContent = "M";
+measure.style.position = "absolute";
+measure.style.visibility = "hidden";
+measure.style.fontFamily = getComputedStyle(container).fontFamily;
+measure.style.fontSize = getComputedStyle(container).fontSize;
+measure.style.lineHeight = getComputedStyle(container).lineHeight;
+document.body.appendChild(measure);
 
-let cols = Math.floor(window.innerWidth / cellWidth);
-let rows = Math.floor(window.innerHeight / cellHeight);
+let charWidth = measure.getBoundingClientRect().width;
+let charHeight = measure.getBoundingClientRect().height;
+measure.remove();
 
-// Classic Life grid (0 = dead, 1 = alive)
+/* ---------- grid size ---------- */
+let cols = Math.ceil(window.innerWidth / charWidth);
+let rows = Math.ceil(window.innerHeight / charHeight);
+
+/* ---------- Life grid ---------- */
 let grid = Array.from({ length: rows }, () =>
     Array.from({ length: cols }, () => Math.random() > 0.85 ? 1 : 0)
 );
 
-// Track mouse position in grid coordinates
+/* ---------- mouse ---------- */
 let mouse = { col: -1, row: -1 };
 
 window.addEventListener("mousemove", e => {
-    mouse.col = Math.floor(e.clientX / cellWidth);
-    mouse.row = Math.floor(e.clientY / cellHeight);
+    mouse.col = Math.floor(e.clientX / charWidth);
+    mouse.row = Math.floor(e.clientY / charHeight);
 });
 
 window.addEventListener("mouseleave", () => {
@@ -24,6 +36,7 @@ window.addEventListener("mouseleave", () => {
     mouse.row = -1;
 });
 
+/* ---------- Life logic ---------- */
 function countNeighbors(r, c) {
     let sum = 0;
     for (let dr = -1; dr <= 1; dr++) {
@@ -42,16 +55,15 @@ function step() {
 
     for (let r = 0; r < rows; r++) {
         for (let c = 0; c < cols; c++) {
-            const neighbors = countNeighbors(r, c);
+            const n = countNeighbors(r, c);
 
-            // Standard Game of Life rules
-            if (grid[r][c] === 1) {
-                next[r][c] = neighbors === 2 || neighbors === 3 ? 1 : 0;
+            if (grid[r][c]) {
+                next[r][c] = n === 2 || n === 3 ? 1 : 0;
             } else {
-                next[r][c] = neighbors === 3 ? 1 : 0;
+                next[r][c] = n === 3 ? 1 : 0;
             }
 
-            // 🖱️ Hover influence (soft)
+            // Hover influence
             if (
                 mouse.col >= 0 &&
                 Math.abs(c - mouse.col) <= 2 &&
@@ -65,6 +77,7 @@ function step() {
     grid = next;
 }
 
+/* ---------- render ---------- */
 function render() {
     let output = "";
     for (let r = 0; r < rows; r++) {
@@ -76,9 +89,10 @@ function render() {
     container.textContent = output;
 }
 
+/* ---------- resize ---------- */
 function resize() {
-    cols = Math.floor(window.innerWidth / cellWidth);
-    rows = Math.floor(window.innerHeight / cellHeight);
+    cols = Math.ceil(window.innerWidth / charWidth);
+    rows = Math.ceil(window.innerHeight / charHeight);
     grid = Array.from({ length: rows }, () =>
         Array.from({ length: cols }, () => 0)
     );
@@ -86,6 +100,7 @@ function resize() {
 
 window.addEventListener("resize", resize);
 
+/* ---------- start ---------- */
 render();
 setInterval(() => {
     step();
