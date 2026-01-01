@@ -87,15 +87,15 @@ body {
 .ascii-background {
     position: fixed;
     inset: 0;
-    font-family: "Courier New", monospace;
+    font-family: monospace;
     font-size: 10px;
-    line-height: 1;
+    line-height: 10px;
     white-space: pre;
-    overflow: hidden;
+    color: rgba(166, 166, 166, 0.18);
     pointer-events: none;
     z-index: -1;
+    overflow: hidden;
 }
-
 
 .column-title a {
     color: white;
