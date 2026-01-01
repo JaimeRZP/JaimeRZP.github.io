@@ -1,18 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <title>JRZ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    <title>JRZ</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
+
+    <!-- Minimal fallback styling so background is visible even if CSS fails -->
+    <style>
+        body {
+            margin: 0;
+            background: rgb(0, 0, 0);
+        }
+
+        .ascii-background {
+            position: fixed;
+            inset: 0;
+            font-family: monospace;
+            font-size: 10px;
+            line-height: 10px;
+            white-space: pre;
+            color: rgba(166, 166, 166, 0.18);
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
-    <div class="ascii-background" id="ascii-background"></div> <!-- Add this element -->
+
+    <!-- ASCII Game of Life background -->
+    <div id="ascii-background" class="ascii-background"></div>
+
     <div class="container">
         <div class="column">
             <div class="ascii-art">
@@ -38,22 +64,26 @@
                 </pre>
             </div>
         </div>
+
         <div class="column">
             <p><b>Jaime Ruiz Zapatero</b></p>
             <p>jaime.ruiz-zapatero@ucl.ac.uk</p>
-            Research Software Engineer at University College London (UCL) working on Vera Rubin and Euclid.
-            My research focuses in the quantification and propagation of uncertainty in Cosmology. 
-            In order to do so I use state-of-the-art statistical methods and machine learning techniques.
-            <p></p>
-            Are you a student looking for work?
-            <p></p>
-            Shoot me an email and we can figure something out.
-
-
+            <p>
+                Research Software Engineer at University College London (UCL)
+                working on Vera Rubin and Euclid.
+            </p>
+            <p>
+                My research focuses on the quantification and propagation of
+                uncertainty in Cosmology using state-of-the-art statistical
+                methods and machine learning techniques.
+            </p>
+            <p>Are you a student looking for work?</p>
+            <p>Shoot me an email and we can figure something out.</p>
         </div>
+
         <div class="column">
             <p class="column-title"><b>Index:</b></p>
-            <ul>    
+            <ul>
                 <li><a href="/index.html">about</a></li>
                 <li><a href="/career.html">career</a></li>
                 <li><a href="/research.html">research</a></li>
@@ -61,6 +91,7 @@
             </ul>
         </div>
     </div>
+
     <div class="bottom-text">
         <div class="links">
             <h3><a href="https://arxiv.org/a/0000-0002-7951-4391.html" target="_blank">Publications</a></h3>
@@ -68,5 +99,8 @@
             <h3><a href="https://github.com/JaimeRZP" target="_blank">GitHub</a></h3>
         </div>
     </div>
+
+    <!-- Game of Life script MUST be loaded last -->
+    <script src="life.js"></script>
 </body>
 </html>

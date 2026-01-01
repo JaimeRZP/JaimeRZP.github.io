@@ -84,6 +84,22 @@ body {
     animation: typing 4s steps(20, end) infinite, blink 0.5s step-end infinite alternate;
 }
 
+.ascii-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: monospace;
+    font-size: 10px;
+    line-height: 10px;
+    white-space: pre;
+    color: rgba(0, 0, 0, 0.15); /* subtle */
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
 .column-title a {
     color: white;
     text-decoration: none;
