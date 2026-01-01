@@ -105,4 +105,4 @@ render();
 setInterval(() => {
     step();
     render();
-}, 120);
+}, 80);
